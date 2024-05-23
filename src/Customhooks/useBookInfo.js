@@ -19,9 +19,6 @@ function useBookInfo({query,sort,record,page,reset,setReset}){
             // eslint-disable-next-line
             query=query.trim().replace(/ /g,'+');
 
-            if(sort){
-                 query=`${query}&sort=${sort}`;
-            }
             let response=await axios.get(`https://openlibrary.org/search.json?q=${query}&fields=title,author_name,first_publish_year,subject,ratings_average&sort=${sort}&page=${page}&limit=${record}`,{signal});
             if(response.data.docs.length===0){
             setFetchError(false);
