@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import useBookInfo from "../Customhooks/useBookInfo";
 import useAuthorInfo from "../Customhooks/useAuthorInfo";
 import Card from "./Card";
@@ -24,7 +24,7 @@ function Dashboard(){
             setDebounceInput(event.target.value);
             setReset(1);
         },500)
-    },[query]);
+    },[]);
     
 
     return(
