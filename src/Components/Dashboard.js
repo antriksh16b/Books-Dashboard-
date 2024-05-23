@@ -28,11 +28,11 @@ function Dashboard(){
     
 
     return(
-        <>
-        <h1 className="text-2xl p-4 text-white bg-blue-400">Dashboard</h1>
-        <div className="w-full flex flex-col items-center">
-        <div className="flex flex-row items-center">
-        <div className="w-full max-w-lg rounded-xl m-4 border flex overflow-hidden">
+        <div className="w-full">
+        <h1 className="sm:text-2xl width w-full p-4 text-white bg-blue-400">Dashboard</h1>
+        <div className="w-full width flex flex-col items-center">
+        <div className="flex flex-row w-full items-center justify-center">
+        <div className="sm:w-full w-1/2 sm:max-w-lg rounded-xl m-4 border flex flex-row justify-center overflow-hidden">
             <input type="text" 
             className="px-7 py-3 w-full outline-none" 
             placeholder="Search" 
@@ -65,7 +65,7 @@ function Dashboard(){
                 :<></>
             }
             </div>
-            <table className="auto rounded-3xl overflow-hidden m-7">
+            <table className="rounded-3xl overflow-hidden m-7 auto">
                 <div className="table-header-group p-3">
                     <Card className="px-12 py-4 font-medium">{arrayOfHeader}</Card>
                 </div>
@@ -75,7 +75,7 @@ function Dashboard(){
                     ))}
             </table>
         </div>
-        </>
+        </div>
     )
 }
 export default Dashboard;
