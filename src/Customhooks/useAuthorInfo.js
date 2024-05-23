@@ -31,7 +31,7 @@ function useAuthorInfo({data,loading,setLoading}){
     }
     }
         fetchData();
-    },[data])
+    },[data,setLoading])
     return ({authorData,loading});
 }
 
